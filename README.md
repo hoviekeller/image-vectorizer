@@ -9,7 +9,7 @@ You can install this app as a PWA on your mobile device, moreover, it is availab
 Chrome: https://chrome.google.com/webstore/detail/image-vectorizer-convert/abcganhipmjnjcgpeipblkhbdnibeplh  
 Opera: https://addons.opera.com/en/extensions/details/image-vectorizer-convert-to-svg/  
 Firefox: https://addons.mozilla.org/en-US/firefox/addon/image-vectorizer/  
-Edge:   
+Edge: https://microsoftedge.microsoft.com/addons/detail/fcalkigepcdjdebhhndnlijidcmdhapo  
 
 Webapp & PWA: https://webbrowsertools.com/image-vectorizer/  
 
