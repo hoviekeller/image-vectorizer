@@ -77,7 +77,7 @@ var config = {
       if (config.port.name === "win") {
         if (config.resize.timeout) window.clearTimeout(config.resize.timeout);
         config.resize.timeout = window.setTimeout(async function () {
-          var current = await chrome.windows.getCurrent();
+          const current = await chrome.windows.getCurrent();
           /*  */
           config.storage.write("interface.size", {
             "top": current.top,
@@ -93,7 +93,7 @@ var config = {
     "name": '',
     "connect": function () {
       config.port.name = "webapp";
-      var context = document.documentElement.getAttribute("context");
+      const context = document.documentElement.getAttribute("context");
       /*  */
       if (chrome.runtime) {
         if (chrome.runtime.connect) {
@@ -122,7 +122,7 @@ var config = {
     "write": function (id, data) {
       if (id) {
         if (data !== '' && data !== null && data !== undefined) {
-          var tmp = {};
+          let tmp = {};
           tmp[id] = data;
           config.storage.local[id] = data;
           chrome.storage.local.set(tmp, function () {});
@@ -134,9 +134,9 @@ var config = {
     }
   },
   "load": function () {
-    var reload = document.getElementById("reload");
-    var support = document.getElementById("support");
-    var donation = document.getElementById("donation");
+    const reload = document.getElementById("reload");
+    const support = document.getElementById("support");
+    const donation = document.getElementById("donation");
     /*  */
     config.reader = new FileReader();
     config.preview.element = document.getElementById("preview");
@@ -167,14 +167,14 @@ var config = {
     /*  */
     support.addEventListener("click", function () {
       if (config.port.name !== "webapp") {
-        var url = config.addon.homepage();
+        const url = config.addon.homepage();
         chrome.tabs.create({"url": url, "active": true});
       }
     }, false);
     /*  */
     donation.addEventListener("click", function () {
       if (config.port.name !== "webapp") {
-        var url = config.addon.homepage() + "?reason=support";
+        const url = config.addon.homepage() + "?reason=support";
         chrome.tabs.create({"url": url, "active": true});
       }
     }, false);
@@ -208,17 +208,17 @@ var config = {
       config.input.element.strokewidth.disabled = config.app.prefs.index !== 1;
       config.option = config.app.prefs.option === "custom" ? config.app.prefs.custom : config.app.prefs.option;
       /*  */
-      var custom = document.querySelector(".custom");
+      const custom = document.querySelector(".custom");
       [...custom.querySelectorAll("label")].forEach(function (e) {
         e.style.opacity = config.app.prefs.index !== 1 ? "0.7" : "1.0";
         e.style.pointerEvents = config.app.prefs.index !== 1 ? "none" : "unset";
       });
     },
     "store": function () {
-      var preview = config.preview.element.checked;
-      var index = config.select.element.selectedIndex;
-      var option = config.select.element[index].value;
-      var custom = {
+      const preview = config.preview.element.checked;
+      const index = config.select.element.selectedIndex;
+      const option = config.select.element[index].value;
+      const custom = {
         "ltres": config.input.element.ltres.value,
         "qtres": config.input.element.qtres.value,
         "scale": config.input.element.scale.value,
@@ -252,12 +252,12 @@ var config = {
             config.output.element.style.background = "none";
             config.console.element.textContent = ">> Image rasterizing is done! \n>> Please click on the download button to save the SVG file.";
             /*  */
-            var img = document.createElement("img");
+            const img = document.createElement("img");
             img.src = "data:image/svg+xml;charset=utf-8," + svg;
             config.output.element.appendChild(img);
             /*  */
-            var source = '<?xml version="1.0" encoding="UTF-8" standalone="no"?' + '>' + '\r\n' + svg;
-            var href = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(source);
+            const source = '<?xml version="1.0" encoding="UTF-8" standalone="no"?' + '>' + '\r\n' + svg;
+            const href = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(source);
             /*  */
             config.download.element.href = href;
             config.download.element.download = "result.svg";
