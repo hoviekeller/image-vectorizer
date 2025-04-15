@@ -134,6 +134,7 @@ var config = {
     }
   },
   "load": function () {
+    const theme = document.getElementById("theme");
     const reload = document.getElementById("reload");
     const support = document.getElementById("support");
     const donation = document.getElementById("donation");
@@ -179,6 +180,14 @@ var config = {
       }
     }, false);
     /*  */
+    theme.addEventListener("click", function () {
+      let attribute = document.documentElement.getAttribute("theme");
+      attribute = attribute === "dark" ? "light" : "dark";
+      /*  */
+      document.documentElement.setAttribute("theme", attribute);
+      config.storage.write("theme", attribute);
+    }, false);
+    /*  */
     config.storage.load(config.app.update);
     document.removeEventListener("load", config.load, false);
     reload.addEventListener("click", function () {document.location.reload()}, false);
@@ -209,6 +218,9 @@ var config = {
       config.option = config.app.prefs.option === "custom" ? config.app.prefs.custom : config.app.prefs.option;
       /*  */
       const custom = document.querySelector(".custom");
+      const theme = config.storage.read("theme") !== undefined ? config.storage.read("theme") : "light";
+      /*  */
+      document.documentElement.setAttribute("theme", theme !== undefined ? theme : "light");
       [...custom.querySelectorAll("label")].forEach(function (e) {
         e.style.opacity = config.app.prefs.index !== 1 ? "0.7" : "1.0";
         e.style.pointerEvents = config.app.prefs.index !== 1 ? "none" : "unset";
@@ -238,14 +250,16 @@ var config = {
         config.vectorize.element.click();
       }
     },
-    "render": function () {
+    "render": async function () {
       config.app.update();
       /*  */
       if (config.data && config.option) {
         config.output.element.textContent = '';
         config.console.element.textContent = ">> Image rasterizing in progress, please wait...";
-        config.output.element.style.background = 'transparent url("resources/loader.gif") no-repeat center center';
-        config.output.element.style.backgroundSize = "128px";
+        config.output.element.style.background = 'transparent url("resources/loader.svg") no-repeat center center';
+        config.output.element.style.backgroundSize = "78px";
+        /*  */
+        await new Promise(resolve => window.setTimeout(resolve, 300));
         /*  */
         if (ImageTracer) {
           ImageTracer.imageToSVG(config.data,	function (svg) {

@@ -401,3 +401,57 @@ body {
 html[context='webapp'] .toolbar {
   display: none;
 }
+
+html[theme='dark'], 
+html[theme='dark'] body {
+  color: #ebebeb;
+  color-scheme: dark;
+  background-color: #1e1e1e;
+}
+
+html[theme='dark'] .container #fileio,
+html[theme='dark'] .container #output {
+  background-color: #1e1e1e;
+}
+
+html[theme='dark'] #options select,
+html[theme='dark'] #options input[type='number'] {
+  background-color: #000000;
+}
+
+html[theme='dark'] .download:hover,
+html[theme='dark'] .toolbar table tr td:hover {
+  background-color: rgb(255 255 255 / 10%);
+}
+
+html[theme='dark'] .console pre,
+html[theme='dark'] .console summary,
+html[theme='dark'] .options summary,
+html[theme='dark'] .container #fileio input[type='file'] {
+  color: #ebebeb;
+}
+
+html[theme='dark'] #options label,
+html[theme='dark'] #options select,
+html[theme='dark'] #options input[type='number'] {
+  color: #ebebeb;
+}
+
+html[theme='dark'] .container #output .inner,
+html[theme='dark'] .container #fileio > span {
+  color: #bbbbbb;
+}
+
+html[theme='dark'] .console pre,
+html[theme='dark'] #options select,
+html[theme='dark'] .container #fileio,
+html[theme='dark'] .container #output,
+html[theme='dark'] #options input[type='number'] {
+  border-color: rgb(255 255 255 / 25%);
+}
+
+html[theme='dark'] .download svg,
+html[theme='dark'] .toolbar table tr td svg,
+html[theme='dark'] .container #fileio .arrow svg {
+  fill: #ebebeb;
+}
