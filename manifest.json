@@ -1,5 +1,5 @@
 {
-  "version": "0.1.4",
+  "version": "0.1.5",
   "manifest_version": 3,
   "offline_enabled": true,
   "permissions": ["storage"],
@@ -15,10 +15,10 @@
   "action": {
     "default_title": "Image Vectorizer (Convert to SVG)",
     "default_icon": {
-      "16": "data/icons/16.png",
-      "32": "data/icons/32.png",
-      "48": "data/icons/48.png",
-      "64": "data/icons/64.png"
+      "16": "data/icons/toolbar/16.png",
+      "32": "data/icons/toolbar/32.png",
+      "48": "data/icons/toolbar/48.png",
+      "64": "data/icons/toolbar/64.png"
     }
   },
   "icons": {

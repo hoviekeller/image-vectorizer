@@ -35,7 +35,7 @@ body {
 }
 
 .toolbar table tr td:hover {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .toolbar table tr td svg {
@@ -92,12 +92,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   transition: opacity 0.25s linear;
-  border: solid 1px rgba(0,0,0,0.1);
+  border: solid 1px rgba(0, 0, 0, 0.1);
 }
 
 .container #fileio[empty] {
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAPYQAAD2EBqD+naQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIvSURBVHic7d2xLgRRGEfx79oRvRCFjgQVkn0QNJ5EIRGyhda7SDyHUiOhYAsiNqEk66psqGTEdUfO+XWT7Jf8i5NMscVESOJKtQeUNhjEVLO5vNj2rnnJz/u7108lNnVJU3tAcf2V2Twe37Q9e51JJxGxV2BRp0zVHqC6DADOAOAMAM4A4AwAzgDgDADOAOAMAM4A4AwAzgDgDADOAOAMAM4A4AwAzgDgDADOAOAMAM4A4AwAzgDgDADOAOAMAM4A4AwAzgDgDADOAOAMAM4A4AwAzgDgDADOAOAMAM4A4AwAzgDgDADOAOAMAM4A4AwAzgDgDADOAOAMAM4A4CafjTs+Xd7JEQc1xxSRUhM5b7S/i/vIMSywqKqcY3i0c7X98Tz5bNxbjvmUol9nVkE5//AuFiJi4Ve3dEBKefbzs68AOAOAMwA4A4AzADgDgDMAOAOAMwA4A4AzALjJfwEppVFEvqg5poScUi/lvPaD08eIuPvtPfWl2y9PtWb8lcHZylxvPH5ofZji5HDraq/ApE7xFQBnAHAGAGcAcAYAZwBwBgBnAHAGAGcAcAYAZwBwBgBnAHAGAGcAcAYAZwBwBgBnAHAGAGcAcAYAZwBwBgBnAHAGAGcAcAYAZwBwBgBnAHAGAGcAcAYAZwBwBgBnAHAGAGcAcAYAZwBwBgBnAHAGAGcAcAYAZwBwBgBnAHAGAGcAcAYA13z/k3/u/HLUW19abXv2Mt2MSsyRpO54BxisNnYwXujbAAAAAElFTkSuQmCC') no-repeat center center;
-  background-size: 32px;
+  background-size: 48px;
 }
 
 .container #fileio.disabled {
@@ -122,12 +122,12 @@ body {
   text-align: center;
   position: relative;
   width: calc(65% - 5px);
-  border: solid 1px rgba(0,0,0,0.1);
+  border: solid 1px rgba(0, 0, 0, 0.1);
 }
 
 .container #output .inner {
   width: 100%;
-  color: #555;
+  color: #333;
   height: 100%;
   display: flex;
   cursor: no-drop;
@@ -154,7 +154,7 @@ body {
 }
 
 .container #fileio .arrow svg {
-  fill: #555;
+  fill: #333;
   pointer-events: none;
   vertical-align: middle;
 }
@@ -190,7 +190,7 @@ body {
 }
 
 .download:hover {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .download a {
@@ -282,8 +282,8 @@ body {
   background: #fff;
   text-indent: 5px;
   vertical-align: middle;
-  border: solid 1px rgba(0,0,0,0.1);
   font-family: system-ui, sans-serif;
+  border: solid 1px rgba(0, 0, 0, 0.1);
 }
 
 #options label {
@@ -320,7 +320,7 @@ body {
   box-sizing: border-box;
   font-family: monospace;
   width: calc(100% - 120px);
-  border: solid 1px rgba(0,0,0,0.1);
+  border: solid 1px rgba(0, 0, 0, 0.1);
 }
 
 #options .custom {
@@ -380,7 +380,7 @@ body {
   }
   .options #options label {
     height: 86px;
-    border: solid 1px rgba(0,0,0,0.1);
+    border: solid 1px rgba(0, 0, 0, 0.1);
   }
   .options #options input[type='button'] {
     margin-top: 5px;
@@ -394,7 +394,7 @@ body {
   .options #options input[type='number'] {
     border: 0;
     width: 100%;
-    border-top: solid 1px rgba(0,0,0,0.05);
+    border-top: solid 1px rgba(0, 0, 0, 0.05);
   }
 }
 
